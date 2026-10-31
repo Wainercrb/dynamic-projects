@@ -2,15 +2,15 @@
 
 La aplicación principal usa Angular **22.2.4**, CLI/build **22.2.5** y TypeScript **6.0.3**. AngularJS 1.8.3 se ejecuta en un documento independiente: no se mezclan ambos runtimes en la misma página.
 
-| Preguntas  | Implementación                                                                           | Cómo comprobar                                                     |
-| ---------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| 3          | `legacy/angularjs/`: controlador, ng-model, ng-repeat y ng-if                            | En Angular clásico, abrir el enlace a AngularJS y editar el nombre |
-| 12, 27, 28 | `src/app/legacy/module.ts`: declarations, imports, RouterModule.forChild y NgModule lazy | Navegar a Angular clásico                                          |
-| 14, 15     | *ngIf, *ngFor, ngClass y ngStyle reales                                                  | Filtrar temas y alternar la lista clásica                          |
-| 37, 38     | `tests/legacy/angularjs.spec.js` y `karma.conf.cjs`                                      | `npm run test:legacy`: 2 pruebas Jasmine/Karma                     |
-| 39         | `legacy/protractor/`: test real con selectores by.model y by.repeater                    | ChromeDriver en puerto 9515 y `npm run test:protractor`            |
+| Preguntas  | Implementación                                                                                    | Cómo comprobar                                                     |
+| ---------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| 3          | `examples/angularjs/`: controlador, ng-model, ng-repeat y ng-if                                   | En Angular clásico, abrir el enlace a AngularJS y editar el nombre |
+| 12, 27, 28 | `src/app/angular-clasico/module.ts`: declarations, imports, RouterModule.forChild y NgModule lazy | Navegar a Angular clásico                                          |
+| 14, 15     | *ngIf, *ngFor, ngClass y ngStyle reales                                                           | Filtrar temas y alternar la lista clásica                          |
+| 37, 38     | `tests/angularjs/angularjs.spec.js` y `karma.conf.cjs`                                            | `npm run test:angularjs`: 2 pruebas Jasmine/Karma                  |
+| 39         | `examples/protractor/`: test real con selectores by.model y by.repeater                           | ChromeDriver en puerto 9515 y `npm run test:protractor`            |
 
-`npm run prepare:legacy` copia el runtime AngularJS instalado por npm y el ejemplo a `public/legacy-angularjs`; se ejecuta automáticamente antes de start y build. No depende de un CDN.
+`npm run prepare:angularjs` copia el runtime AngularJS instalado por npm y el ejemplo a `public/examples/angularjs`; se ejecuta automáticamente antes de start y build. No depende de un CDN.
 
 ## Protractor
 

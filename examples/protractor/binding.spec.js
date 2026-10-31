@@ -1,6 +1,6 @@
 describe('AngularJS con Protractor (histórico)', function () {
   it('sincroniza ng-model y la interpolación', async function () {
-    await browser.get('/legacy-angularjs/index.html');
+    await browser.get('/examples/angularjs/index.html');
     const name = element(by.model('vm.name'));
     await name.clear();
     await name.sendKeys('Protractor');

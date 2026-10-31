@@ -3,8 +3,8 @@ module.exports = function (config) {
     frameworks: ['jasmine'],
     files: [
       'node_modules/angular/angular.js',
-      'legacy/angularjs/app.js',
-      'tests/legacy/angularjs.spec.js',
+      'examples/angularjs/app.js',
+      'tests/angularjs/angularjs.spec.js',
     ],
     browsers: ['ChromiumHeadlessCI'],
     customLaunchers: {

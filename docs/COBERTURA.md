@@ -50,7 +50,7 @@ Los números corresponden a Safari.pdf. Las preguntas conceptuales se explican y
 | 44  | clearInterval al destruir                                                | Desmontaje/remontaje E2E; sin prueba de fugas                   |
 | 45  | Motor Ivy integrado en el compilador Angular                             | Build AOT; no requiere instalar otro motor                      |
 | 46  | Build de desarrollo con sourcemaps y scripts de pruebas                  | Build development ejecutado; DevTools disponibles en navegador  |
-| 47  | Carpetas por funcionalidades, shared, server, legacy y tests             | Índice y rutas verificadas                                      |
+| 47  | Carpetas por funcionalidades, shared, server, examples y tests           | Índice y rutas verificadas                                      |
 | 48  | Lazy loading, OnPush, track, minificación y presupuesto                  | Comparación de bytes y cinco mediciones locales                 |
 | 49  | Autorización, hash, CSRF/origen, cookie, validación, rate limit y escape | Tests API y XSS como texto en navegador                         |
 | 50  | Tipado, componentes reutilizables y herramientas trabajando juntos       | Proyecto integrado; ventajas y costes explicados en fundamentos |

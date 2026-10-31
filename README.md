@@ -32,7 +32,7 @@ npm run format:check
 npm run typecheck
 npm run test:unit
 npm run test:api
-npm run test:legacy
+npm run test:angularjs
 # Con npm start activo:
 npm run test:smoke
 # Con npm run start:ssr activo:
@@ -41,7 +41,7 @@ BASE_URL=http://127.0.0.1:4000 npm run test:smoke
 npm run test:performance
 ```
 
-Las pruebas de navegador necesitan Chromium en `/usr/bin/chromium` o `CHROMIUM_PATH`. Protractor y sus requisitos están en [ejemplos históricos](docs/legacy/README.md). Las mediciones de rendimiento se guardan en `docs/performance.json`.
+Las pruebas de navegador necesitan Chromium en `/usr/bin/chromium` o `CHROMIUM_PATH`. Protractor y sus requisitos están en [ejemplos históricos](docs/historicos/README.md). Las mediciones de rendimiento se guardan en `docs/performance.json`.
 
 ## Configuración del backend
 

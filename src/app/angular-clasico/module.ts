@@ -24,9 +24,9 @@ import { RouterModule } from '@angular/router';
       Estas directivas están deprecadas en Angular 21; se conservan aquí para estudiar código
       existente.
     </p>
-    <a href="/legacy-angularjs/index.html">Abrir ejemplo independiente de AngularJS 1.8</a>`,
+    <a href="/examples/angularjs/index.html">Abrir ejemplo independiente de AngularJS 1.8</a>`,
 })
-export class LegacyPage {
+export class AngularClasicoPage {
   filter = '';
   visible = true;
   topics = ['NgModule', 'Directivas estructurales', 'RouterModule'];
@@ -38,11 +38,11 @@ export class LegacyPage {
   }
 }
 @NgModule({
-  declarations: [LegacyPage],
+  declarations: [AngularClasicoPage],
   imports: [
     CommonModule,
     FormsModule,
-    RouterModule.forChild([{ path: '', component: LegacyPage }]),
+    RouterModule.forChild([{ path: '', component: AngularClasicoPage }]),
   ],
 })
-export class LegacyModule {}
+export class AngularClasicoModule {}

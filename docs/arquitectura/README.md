@@ -4,7 +4,7 @@ Análisis del PDF Safari.pdf. Las preguntas se resumen en español y se contrast
 
 ## 12. NgModule
 
-**Estado: Aplicada.** `src/app/legacy/module.ts` declara y carga un NgModule con RouterModule.forChild. La aplicación principal usa standalone.
+**Estado: Aplicada.** `src/app/angular-clasico/module.ts` declara y carga un NgModule con RouterModule.forChild. La aplicación principal usa standalone.
 
 ## 13. Routing
 

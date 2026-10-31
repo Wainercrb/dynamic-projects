@@ -12,7 +12,7 @@ Análisis del PDF Safari.pdf. Las preguntas se resumen en español y se contrast
 
 ## 3. AngularJS frente a Angular
 
-**Estado: Aplicada (histórica).** AngularJS 1.8 se ejecuta en una página independiente; consultar docs/legacy/README.md.
+**Estado: Aplicada (histórica).** AngularJS 1.8 se ejecuta en una página independiente; consultar docs/historicos/README.md.
 
 ## 4. TypeScript
 

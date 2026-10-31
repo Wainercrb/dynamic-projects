@@ -11,7 +11,7 @@ npm run typecheck
 npm run build
 npm run test:unit
 npm run test:api
-npm run test:legacy
+npm run test:angularjs
 npm run start:ssr
 # En otra terminal:
 npm run test:ssr
@@ -24,7 +24,7 @@ npm run test:performance
 - API: 10 escenarios de integración más el test contenedor (11 resultados del runner). Incluyen autorización, CSRF, origen, cookies, contraseña incorrecta, duplicados, fijación de sesión, aislamiento, logout y rate limit.
 - Navegador: 12 comprobaciones de binding, XSS como texto, control de flujo, ambos formularios, HTTP/error/reintento, registro/login/recarga/logout, Material, hooks, NgModule, AngularJS y ausencia de excepciones de página.
 - SSR: 2 solicitudes verifican contenido HTML y marcadores de hidratación sin ejecutar JavaScript, más una petición API anónima que debe devolver 401.
-- Históricos: 2 tests Jasmine/Karma sobre AngularJS y 1 prueba Protractor de binding/selectores. Para Protractor iniciar ChromeDriver y seleccionar el binario compatible; [instrucciones](legacy/README.md).
+- Históricos: 2 tests Jasmine/Karma sobre AngularJS y 1 prueba Protractor de binding/selectores. Para Protractor iniciar ChromeDriver y seleccionar el binario compatible; [instrucciones](historicos/README.md).
 - Rendimiento: cinco contextos nuevos de Chromium, navegación SSR e interacción tras hidratación y comprobación de carga lazy. Se valida presupuesto de bytes, no un umbral de latencia dependiente de hardware.
 
 ## Comparar optimización

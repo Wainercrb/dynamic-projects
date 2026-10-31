@@ -32,7 +32,7 @@ Análisis del PDF Safari.pdf. Las preguntas se resumen en español y se contrast
 
 ## 39. Protractor
 
-**Estado: Aplicada como ejemplo histórico.** Configuración y prueba en legacy/protractor. Consultar docs/legacy/README.md para los requisitos y el resultado real.
+**Estado: Aplicada como ejemplo histórico.** Configuración y prueba en examples/protractor. Consultar docs/historicos/README.md para los requisitos y el resultado real.
 
 ## 40. Angular Universal
 

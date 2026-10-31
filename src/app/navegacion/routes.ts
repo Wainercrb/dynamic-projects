@@ -21,7 +21,10 @@ export const routes: Routes = [
   { path: 'ciclo-vida', loadComponent: () => import('../ciclo-vida/page') },
   { path: 'acceso', loadComponent: () => import('./access') },
   { path: 'privado', canActivate: [demoGuard], loadComponent: () => import('./private') },
-  { path: 'clasico', loadChildren: () => import('../legacy/module').then((m) => m.LegacyModule) },
+  {
+    path: 'clasico',
+    loadChildren: () => import('../angular-clasico/module').then((m) => m.AngularClasicoModule),
+  },
   { path: 'material', loadComponent: () => import('../material/page') },
   { path: '**', redirectTo: 'fundamentos' },
 ];
