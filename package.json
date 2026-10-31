@@ -1,0 +1,37 @@
+{
+  "name": "angular-preguntas-practicas",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "ng serve --host 0.0.0.0",
+    "build": "ng build",
+    "test:smoke": "node tests/smoke.mjs",
+    "prepare:legacy": "node legacy/prepare.mjs",
+    "prestart": "npm run prepare:legacy",
+    "prebuild": "npm run prepare:legacy",
+    "test:legacy": "CHROME_BIN=${CHROMIUM_PATH:-/usr/bin/chromium} karma start karma.conf.cjs",
+    "test:protractor": "protractor legacy/protractor/conf.cjs"
+  },
+  "dependencies": {
+    "@angular/common": "22.2.4",
+    "@angular/compiler": "22.2.4",
+    "@angular/core": "22.2.4",
+    "@angular/forms": "22.2.4",
+    "@angular/platform-browser": "22.2.4",
+    "@angular/router": "22.2.4",
+    "angular": "^1.8.3",
+    "rxjs": "^7.8.2",
+    "tslib": "^2.8.1"
+  },
+  "devDependencies": {
+    "@angular/build": "22.2.5",
+    "@angular/cli": "22.2.5",
+    "jasmine": "^7.0.0",
+    "karma": "^6.4.4",
+    "karma-chrome-launcher": "^3.2.0",
+    "karma-jasmine": "^5.1.0",
+    "playwright-core": "^1.64.1",
+    "protractor": "^7.0.0",
+    "typescript": "~6.0.0"
+  }
+}
