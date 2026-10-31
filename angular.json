@@ -13,6 +13,7 @@
             "tsConfig": "tsconfig.json",
             "index": "index.html",
             "styles": [
+              "node_modules/@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.css"
             ],
             "assets": [
@@ -21,7 +22,15 @@
                 "input": "public"
               }
             ],
-            "outputPath": "dist/ejemplos"
+            "outputPath": "dist/ejemplos",
+            "server": "src/main.server.ts",
+            "ssr": {
+              "entry": "server.ts"
+            },
+            "outputMode": "server",
+            "security": {
+              "allowedHosts": ["localhost", "127.0.0.1"]
+            }
           },
           "configurations": {
             "development": {
@@ -30,7 +39,14 @@
             },
             "production": {
               "optimization": true,
-              "sourceMap": false
+              "sourceMap": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "450kB",
+                  "maximumError": "600kB"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -38,7 +54,9 @@
         "serve": {
           "builder": "@angular/build:dev-server",
           "options": {
-            "buildTarget": "ejemplos:build:development"
+            "buildTarget": "ejemplos:build:development",
+            "proxyConfig": "proxy.conf.json",
+            "allowedHosts": ["localhost", "127.0.0.1"]
           }
         }
       }

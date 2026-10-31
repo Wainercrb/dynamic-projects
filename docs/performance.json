@@ -1,0 +1,38 @@
+{
+  "description": "Medición local: SSR de fundamentos, hidratación y navegación lazy a Material; cinco contextos nuevos de Chromium. Los tiempos no son una garantía de producción.",
+  "node": "v24.19.0",
+  "initialBytes": 339852,
+  "initialGzipBytes": 106740,
+  "productionJs": 481019,
+  "baselineJs": 2123667,
+  "reductionPercent": 77,
+  "medianTtfbMs": 10.5,
+  "medianDomContentLoadedMs": 81,
+  "runs": [
+    {
+      "ttfbMs": 10.100000000093132,
+      "domContentLoadedMs": 81,
+      "lazyRequests": 2
+    },
+    {
+      "ttfbMs": 10.5,
+      "domContentLoadedMs": 87.40000000037253,
+      "lazyRequests": 2
+    },
+    {
+      "ttfbMs": 9.399999999906868,
+      "domContentLoadedMs": 75,
+      "lazyRequests": 2
+    },
+    {
+      "ttfbMs": 13.400000000372529,
+      "domContentLoadedMs": 75,
+      "lazyRequests": 2
+    },
+    {
+      "ttfbMs": 11.100000000093132,
+      "domContentLoadedMs": 82.5,
+      "lazyRequests": 2
+    }
+  ]
+}

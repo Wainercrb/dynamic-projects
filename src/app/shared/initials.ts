@@ -1,3 +1,13 @@
 import { Pipe, PipeTransform } from '@angular/core';
-@Pipe({name:'initials'})
-export class Initials implements PipeTransform { transform(value:string):string { return value.trim().split(/\s+/).filter(Boolean).map(part=>part[0]).join('').toUpperCase(); } }
+@Pipe({ name: 'initials' })
+export class Initials implements PipeTransform {
+  transform(value: string): string {
+    return value
+      .trim()
+      .split(/\s+/)
+      .filter(Boolean)
+      .map((part) => part[0])
+      .join('')
+      .toUpperCase();
+  }
+}

@@ -5,10 +5,14 @@ describe('AngularJS: controlador y binding reales', function () {
     scope = injector.get('$rootScope').$new();
     var controller = injector.get('$controller')('GreetingController');
     scope.vm = controller;
-    element = injector.get('$compile')('<div><input ng-model="vm.name"><p>{{vm.name}}</p><li ng-repeat="t in vm.topics">{{t}}</li></div>')(scope);
+    element = injector.get('$compile')(
+      '<div><input ng-model="vm.name"><p>{{vm.name}}</p><li ng-repeat="t in vm.topics">{{t}}</li></div>',
+    )(scope);
     scope.$digest();
   });
-  afterEach(function () { scope.$destroy(); });
+  afterEach(function () {
+    scope.$destroy();
+  });
   it('renderiza el controlador y la colección', function () {
     expect(element.find('p').text()).toBe('Ada');
     expect(element.find('li').length).toBe(3);

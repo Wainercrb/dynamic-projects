@@ -32,11 +32,11 @@ Análisis del PDF Safari.pdf. Las preguntas se resumen en español y se contrast
 
 ## 30. Autenticación
 
-**Estado: Pendiente de backend.** El permiso en memoria es una simulación, no login ni JWT. Una integración real necesita proveedor, servidor y política de sesión.
+**Estado: Aplicada.** Backend Express con registro, scrypt, cookie HttpOnly y sesiones verificadas en servidor. Ver [seguridad](../seguridad/README.md).
 
 ## 31. Guards
 
-**Estado: Aplicada.** CanActivateFn devuelve un UrlTree cuando no hay permiso. Un guard no es una frontera de seguridad del servidor.
+**Estado: Aplicada.** CanActivateFn consulta la sesión real y devuelve un UrlTree cuando no hay sesión. Un guard no es una frontera de seguridad del servidor.
 
 ## 41. Hooks
 

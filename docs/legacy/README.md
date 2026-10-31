@@ -2,13 +2,13 @@
 
 La aplicación principal usa Angular **22.2.4**, CLI/build **22.2.5** y TypeScript **6.0.3**. AngularJS 1.8.3 se ejecuta en un documento independiente: no se mezclan ambos runtimes en la misma página.
 
-| Preguntas | Implementación | Cómo comprobar |
-| --- | --- | --- |
-| 3 | `legacy/angularjs/`: controlador, ng-model, ng-repeat y ng-if | En Angular clásico, abrir el enlace a AngularJS y editar el nombre |
-| 12, 27, 28 | `src/app/legacy/module.ts`: declarations, imports, RouterModule.forChild y NgModule lazy | Navegar a Angular clásico |
-| 14, 15 | *ngIf, *ngFor, ngClass y ngStyle reales | Filtrar temas y alternar la lista clásica |
-| 37, 38 | `tests/legacy/angularjs.spec.js` y `karma.conf.cjs` | `npm run test:legacy`: 2 pruebas Jasmine/Karma |
-| 39 | `legacy/protractor/`: test real con selectores by.model y by.repeater | ChromeDriver en puerto 9515 y `npm run test:protractor` |
+| Preguntas  | Implementación                                                                           | Cómo comprobar                                                     |
+| ---------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| 3          | `legacy/angularjs/`: controlador, ng-model, ng-repeat y ng-if                            | En Angular clásico, abrir el enlace a AngularJS y editar el nombre |
+| 12, 27, 28 | `src/app/legacy/module.ts`: declarations, imports, RouterModule.forChild y NgModule lazy | Navegar a Angular clásico                                          |
+| 14, 15     | *ngIf, *ngFor, ngClass y ngStyle reales                                                  | Filtrar temas y alternar la lista clásica                          |
+| 37, 38     | `tests/legacy/angularjs.spec.js` y `karma.conf.cjs`                                      | `npm run test:legacy`: 2 pruebas Jasmine/Karma                     |
+| 39         | `legacy/protractor/`: test real con selectores by.model y by.repeater                    | ChromeDriver en puerto 9515 y `npm run test:protractor`            |
 
 `npm run prepare:legacy` copia el runtime AngularJS instalado por npm y el ejemplo a `public/legacy-angularjs`; se ejecuta automáticamente antes de start y build. No depende de un CDN.
 
@@ -29,4 +29,4 @@ AngularJS y Protractor están fuera de soporte; se incluyen por petición expres
 
 ## Referencias antiguas sin una biblioteca equivalente instalable
 
-Ivy ya viene integrado en Angular 22. Angular Universal fue reemplazado por `@angular/ssr`: instalar el paquete Universal antiguo dentro del framework 22 no representa una configuración compatible. SSR continúa como tema opcional documentado; no se afirma que esté implementado. Para depuración se usan DevTools actuales en lugar de depender de Augury.
+Ivy ya viene integrado en Angular 22. Angular Universal fue reemplazado por `@angular/ssr`: instalar el paquete Universal antiguo dentro del framework 22 no representa una configuración compatible. SSR está implementado con @angular/ssr 22 en fundamentos y Material, con hidratación y pruebas del HTML recibido. Para depuración se usan DevTools actuales en lugar de depender de Augury.

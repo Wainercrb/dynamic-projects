@@ -1,3 +1,21 @@
 <!doctype html>
-<html lang="es" ng-app="legacyDemo"><head><meta charset="utf-8"><title>AngularJS 1.8 · ejemplo histórico</title><meta name="viewport" content="width=device-width, initial-scale=1"><script src="angular.min.js" defer></script><script src="app.js" defer></script></head>
-<body ng-controller="GreetingController as vm"><h1>AngularJS 1.8</h1><p>Ejemplo histórico de la pregunta 3, separado de Angular 22.</p><label>Nombre <input ng-model="vm.name"></label><p id="greeting">Hola, {{vm.name}}</p><button ng-click="vm.visible = !vm.visible">Alternar temas</button><ul ng-if="vm.visible"><li ng-repeat="topic in vm.topics track by topic">{{topic}}</li></ul><a href="/clasico">Volver a Angular moderno</a></body></html>
+<html lang="es" ng-app="legacyDemo">
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS 1.8 · ejemplo histórico</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="angular.min.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body ng-controller="GreetingController as vm">
+    <h1>AngularJS 1.8</h1>
+    <p>Ejemplo histórico de la pregunta 3, separado de Angular 22.</p>
+    <label>Nombre <input ng-model="vm.name" /></label>
+    <p id="greeting">Hola, {{vm.name}}</p>
+    <button ng-click="vm.visible = !vm.visible">Alternar temas</button>
+    <ul ng-if="vm.visible">
+      <li ng-repeat="topic in vm.topics track by topic">{{topic}}</li>
+    </ul>
+    <a href="/clasico">Volver a Angular moderno</a>
+  </body>
+</html>

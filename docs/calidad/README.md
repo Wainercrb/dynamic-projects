@@ -4,7 +4,7 @@ Análisis del PDF Safari.pdf. Las preguntas se resumen en español y se contrast
 
 ## 29. Angular Material
 
-**Estado: Opcional.** No se instala: los controles HTML nativos cubren este laboratorio sin otra biblioteca.
+**Estado: Aplicada.** `src/app/material/page.ts` integra tarjeta, botón, switch y tema de Angular Material 22; el navegador prueba su interacción.
 
 ## 32. Detección de cambios
 
@@ -16,11 +16,11 @@ Análisis del PDF Safari.pdf. Las preguntas se resumen en español y se contrast
 
 ## 34. SSR
 
-**Estado: Opcional.** SPA local sin objetivo SEO ni servidor de renderizado. Para un proyecto que lo necesite, evaluar @angular/ssr.
+**Estado: Aplicada.** `src/main.server.ts` configura SSR para fundamentos y Material con @angular/ssr; `server.ts` sirve el HTML y la API. `tests/ssr.mjs` comprueba texto y marcadores de hidratación sin ejecutar JavaScript.
 
 ## 36. Tipos de pruebas
 
-**Estado: Aplicada.** Build estricto y smoke de navegador con interacciones. No equivalen a una suite completa de pruebas unitarias, integración y rendimiento.
+**Estado: Aplicada.** Prueba unitaria de pipe, integración de API con sesiones reales, pruebas E2E con Chromium, Jasmine/Karma, Protractor, comprobación SSR sin JavaScript y medición de rendimiento; detalles en [validación](../VALIDACION.md).
 
 ## 37. Jasmine
 
@@ -36,7 +36,7 @@ Análisis del PDF Safari.pdf. Las preguntas se resumen en español y se contrast
 
 ## 40. Angular Universal
 
-**Estado: Histórica / opcional.** Para SSR moderno se usa @angular/ssr. No se instala Universal por seguir una referencia antigua.
+**Estado: Aplicada con API actual.** La funcionalidad de Angular Universal se implementa mediante @angular/ssr 22. El paquete histórico fue reemplazado y no se mezcla con Angular 22.
 
 ## 45. Ivy
 
@@ -48,8 +48,8 @@ Análisis del PDF Safari.pdf. Las preguntas se resumen en español y se contrast
 
 ## 48. Rendimiento
 
-**Estado: Aplicada.** Lazy loading, OnPush y track por identidad. No se afirma una mejora medida sin un benchmark.
+**Estado: Aplicada.** Lazy loading, OnPush, track por identidad y presupuesto de tamaño de build. `tests/performance.mjs` compara JS optimizado contra desarrollo, mide cinco cargas SSR y comprueba chunks diferidos. Resultados actuales en [performance.json](../performance.json); los tiempos son de esta máquina.
 
 ## 49. Seguridad
 
-**Estado: Parcial.** Interpolación escapada y sin bypassSecurityTrustHtml ni almacenamiento de tokens. Autorización, validación de servidor y protección CSRF deben implementarse en un backend real.
+**Estado: Aplicada en el laboratorio.** Autorización del servidor, contraseñas hasheadas, sesión HttpOnly, CSRF/origen, validaciones, límite de intentos e interpolación escapada. Ver [medidas y límites](../seguridad/README.md).
